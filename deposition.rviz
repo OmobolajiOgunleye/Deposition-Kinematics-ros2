@@ -1,0 +1,110 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+      Splitter Ratio: 0.5
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 0.05
+      Plane Cell Count: 14
+      Plane: XY
+      Normal Cell Count: 0
+      Color: 130; 130; 135
+      Offset:
+        X: 0
+        Y: 0
+        Z: -0.011
+      Value: true
+    - Class: rviz_default_plugins/RobotModel
+      Name: Robot
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_description
+      Visual Enabled: true
+      Collision Enabled: false
+      Alpha: 1
+      Value: true
+    - Class: rviz_default_plugins/Path
+      Name: Planned toolpath
+      Enabled: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /toolpath
+      Color: 90; 160; 255
+      Alpha: 0.35
+      Line Style: Lines
+      Line Width: 0.002
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Name: Deposited bead
+      Enabled: true
+      Topic:
+        Depth: 100
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /deposited_bead
+      Value: true
+    - Class: rviz_default_plugins/Pose
+      Name: Tool pose
+      Enabled: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /tool_pose
+      Shape: Arrow
+      Color: 255; 255; 0
+      Head Length: 0.015
+      Head Radius: 0.006
+      Shaft Length: 0.03
+      Shaft Radius: 0.003
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: false
+      Show Names: true
+      Value: false
+  Global Options:
+    Background Color: 38; 40; 46
+    Fixed Frame: world
+    Frame Rate: 30
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
+      Target Frame: <Fixed Frame>
+      Distance: 0.85
+      Focal Point:
+        X: 0.2
+        Y: 0.0
+        Z: 0.0
+      Pitch: 0.75
+      Yaw: 3.6
+      Value: Orbit (rviz)
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 900
+  Width: 1400
