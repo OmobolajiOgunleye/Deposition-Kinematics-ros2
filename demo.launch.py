@@ -1,12 +1,3 @@
-"""Launch the deposition demo: robot_state_publisher + deposition_node (+ RViz, + noisy encoders and Kalman estimator).
-
-Examples
---------
-    ros2 launch deposition_kinematics_ros2 demo.launch.py
-    ros2 launch deposition_kinematics_ros2 demo.launch.py path:=spiral dof:=2 tool:=fixed
-    ros2 launch deposition_kinematics_ros2 demo.launch.py layers:=3 speed:=40.0
-    ros2 launch deposition_kinematics_ros2 demo.launch.py rviz:=false      # no GUI
-"""
 import os
 
 from ament_index_python.packages import get_package_share_directory
