@@ -5,26 +5,7 @@ ROS 2 node that plays a layer-by-layer deposition toolpath (WAAM / DED style) on
 planar 2R or 3R arm with a vertical Z axis. The inverse kinematics come from the
 Deposition-Kinematics toolkit; this node adds the ROS interfaces.
 
-Publishes
----------
-/joint_states          sensor_msgs/JointState        joint1..jointN (rad) and z_lift (m), with velocities
-/tool_pose             geometry_msgs/PoseStamped     tool pose in the world frame (m)
-/toolpath              nav_msgs/Path                 the planned toolpath of all layers (m), republished at 1 Hz
-/deposited_bead        visualization_msgs/Marker     the bead laid down so far (one marker per layer)
-/deposition/state      std_msgs/String               APPROACH | DEPOSITING | LAYER_CHANGE | RETURN_HOME | DONE
-/deposition/progress   std_msgs/Float32              0.0 .. 1.0 of the whole trajectory
 
-Parameters
-----------
-path        'circle' | 'spiral'      toolpath type (default 'circle')
-dof         2 | 3                    number of arm joints (default 3)
-tool        'fixed' | 'tangent'      3R tool direction (default 'tangent')
-fixed_phi   float                    tool direction for tool:='fixed', rad (default 0.0)
-speed       float                    deposition travel speed, mm/s (default 25.0)
-layers      int                      number of layers, 0 = project default (default 0)
-rate_hz     float                    joint-state publish rate (default 50.0)
-loop        bool                     restart after returning home (default False)
-frame_id    str                      world frame name (default 'world')
 """
 from __future__ import annotations
 
